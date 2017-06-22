@@ -31,6 +31,9 @@ char *itoa(int n)
 	while(n)
 	{
 		ret[i--] = n%10+'0';
+		
+		printf("ret[i]=%x\n",ret[i]);		
+
 		n/=10;
 	}
 	return ret;
@@ -69,7 +72,7 @@ int main(void)
 	char *string = itoa(14357);
 	printf("string is %s\n", string);
 	
-	int num = atoi("-124");
+	int num = atoi("123456789");
 	printf("test is %d\n", num);
 
 	return 0;
